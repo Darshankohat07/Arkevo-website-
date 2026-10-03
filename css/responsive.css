@@ -1,0 +1,54 @@
+/* Responsive Breakpoints */
+        @media (max-width: 1024px) {
+            .hero > .container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .hero h1 {
+                font-size: 3.1rem;
+            }
+            .audit-steps-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: #090e14;
+                flex-direction: column;
+                justify-content: center;
+                gap: 2rem;
+                transition: 0.3s ease;
+                z-index: 999;
+                border-top: 1px solid var(--border-subtle);
+            }
+            .nav-links.active {
+                left: 0;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .nav-cta {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+            .section-header h2 {
+                font-size: 2.1rem;
+            }
+            .audit-card {
+                padding: 2rem 1.5rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }

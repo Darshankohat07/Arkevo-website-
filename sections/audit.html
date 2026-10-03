@@ -1,0 +1,72 @@
+<section id="audit" class="section audit-section">
+        <div class="container">
+            <div class="audit-card fade-in">
+                <div class="audit-steps-grid">
+                    <div>
+                        <div class="mono-badge">30-Minute Marketplace Diagnostic</div>
+                        <h2 style="font-size: 2.2rem; margin-bottom: 1rem;">Uncover What Is Holding Your <span class="cyan-text">Brand Back</span></h2>
+                        <p style="color: var(--text-gray); font-size: 0.95rem; margin-bottom: 1.25rem;">
+                            Select the primary bottlenecks you currently face. In your consultation, we'll walk through actionable account audit findings with zero generic pitch decks.
+                        </p>
+                        
+                        <div class="audit-checklist" id="diagnosticList">
+                            <div class="audit-item selected" onclick="toggleAuditItem(this)">
+                                <div class="custom-checkbox">✓</div>
+                                <span>High ACoS & wasted spend on irrelevant search terms</span>
+                            </div>
+                            <div class="audit-item selected" onclick="toggleAuditItem(this)">
+                                <div class="custom-checkbox">✓</div>
+                                <span>Low organic ranking & poor backend search term indexing</span>
+                            </div>
+                            <div class="audit-item" onclick="toggleAuditItem(this)">
+                                <div class="custom-checkbox">✓</div>
+                                <span>Unleveraged Walmart Connect opportunity</span>
+                            </div>
+                            <div class="audit-item" onclick="toggleAuditItem(this)">
+                                <div class="custom-checkbox">✓</div>
+                                <span>Inability to scale Sponsored Brands, Display, & Video</span>
+                            </div>
+                            <div class="audit-item" onclick="toggleAuditItem(this)">
+                                <div class="custom-checkbox">✓</div>
+                                <span>Lack of clear SKU-level margin attribution & reporting</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <form class="audit-form" onsubmit="handleAuditSubmit(event)">
+                            <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Request Growth Assessment</h3>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Directly reviewed by senior marketplace operators.</p>
+                            
+                            <div class="form-group">
+                                <label>Brand / Company Name</label>
+                                <input type="text" id="brandName" placeholder="e.g. Acme Brands Co." required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Work Email</label>
+                                <input type="email" id="workEmail" placeholder="founder@acme.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Monthly Ad Spend (Amazon & Walmart)</label>
+                                <select id="spendRange">
+                                    <option value="5k-15k">$5,000 – $15,000 / month</option>
+                                    <option value="15k-50k" selected>$15,000 – $50,000 / month</option>
+                                    <option value="50k-150k">$50,000 – $150,000 / month</option>
+                                    <option value="150k+">$150,000+ / month</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
+                                Claim Free Account Audit
+                            </button>
+                            <div id="formFeedback" style="display: none; color: var(--accent-green); font-size: 0.85rem; text-align: center; margin-top: 8px;">
+                                ✓ Request received! Our marketplace team will contact you within 24 hours.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

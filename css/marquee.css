@@ -1,0 +1,50 @@
+/* Platform / Logo Strip (SellerPass Reference) */
+        .marquee-strip {
+            background-color: var(--bg-secondary);
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 2.5rem 0;
+            text-align: center;
+        }
+
+        .marquee-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 1.8rem;
+        }
+
+        .platforms-flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 3rem;
+        }
+
+        .platform-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #94a3b8;
+            opacity: 0.85;
+            transition: all 0.25s ease;
+        }
+
+        .platform-item:hover {
+            color: var(--primary);
+            opacity: 1;
+            transform: translateY(-2px);
+        }
+
+        .platform-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--primary);
+        }

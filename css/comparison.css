@@ -1,0 +1,81 @@
+/* Comparison Table (Key SellerPass Feature) */
+        .comparison-section {
+            background-color: var(--bg-dark);
+            position: relative;
+        }
+
+        .comparison-table-wrapper {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 14px;
+            overflow-x: auto;
+            backdrop-filter: blur(12px);
+            box-shadow: var(--card-shadow);
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 800px;
+            text-align: left;
+        }
+
+        .comparison-table th, 
+        .comparison-table td {
+            padding: 1.4rem 1.6rem;
+            border-bottom: 1px solid var(--border-subtle);
+            vertical-align: top;
+        }
+
+        .comparison-table th {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            background: rgba(15, 23, 34, 0.8);
+        }
+
+        .comparison-table th.col-arkevo {
+            background: rgba(0, 229, 255, 0.08);
+            border-left: 2px solid var(--primary);
+            border-right: 2px solid var(--primary);
+            border-top: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .comparison-table td.col-arkevo {
+            background: rgba(0, 229, 255, 0.03);
+            border-left: 2px solid var(--primary);
+            border-right: 2px solid var(--primary);
+            font-weight: 500;
+            color: var(--text-white);
+        }
+
+        .comparison-table tr:last-child td.col-arkevo {
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .comparison-feature {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            color: var(--text-white);
+            font-size: 0.95rem;
+            width: 20%;
+        }
+
+        .comparison-col-other {
+            width: 26%;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .badge-winner {
+            display: inline-block;
+            background: var(--accent-gradient);
+            color: #050b11;
+            font-size: 0.68rem;
+            font-weight: 700;
+            padding: 2px 7px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            margin-left: 8px;

@@ -1,0 +1,102 @@
+/* Diagnostic / Audit Tool (SellerPass Reference) */
+        .audit-section {
+            background-color: var(--bg-secondary);
+        }
+
+        .audit-card {
+            background: var(--bg-card-solid);
+            border: 1px solid var(--border-highlight);
+            box-shadow: var(--glow-shadow);
+            border-radius: 16px;
+            padding: 3.5rem;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .audit-steps-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .audit-checklist {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 1.8rem 0;
+        }
+
+        .audit-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 14px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-subtle);
+            font-size: 0.92rem;
+            color: #e2e8f0;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .audit-item:hover, .audit-item.selected {
+            background: rgba(0, 229, 255, 0.08);
+            border-color: var(--primary);
+            color: var(--text-white);
+        }
+
+        .custom-checkbox {
+            width: 18px;
+            height: 18px;
+            border-radius: 4px;
+            border: 2px solid var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: transparent;
+            font-size: 12px;
+        }
+
+        .audit-item.selected .custom-checkbox {
+            background: var(--primary);
+            color: #090e14;
+        }
+
+        .audit-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            background: rgba(9, 14, 20, 0.85);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.8rem;
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-white);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.92rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus, .form-group select:focus {
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.07);
+        }

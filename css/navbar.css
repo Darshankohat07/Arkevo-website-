@@ -1,0 +1,85 @@
+/* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.25rem 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            background: linear-gradient(180deg, rgba(9, 14, 20, 0.85) 0%, rgba(9, 14, 20, 0) 100%);
+        }
+
+        nav.scrolled {
+            background: rgba(9, 14, 20, 0.94);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 0.9rem 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-logo img {
+            height: 42px;
+            width: auto;
+            border-radius: 6px;
+            object-fit: contain;
+        }
+
+        .brand-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-white);
+            letter-spacing: -0.01em;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .brand-name span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 0.92rem;
+            font-weight: 500;
+            color: var(--text-gray);
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            color: var(--text-white);
+            font-size: 1.6rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }

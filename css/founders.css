@@ -1,0 +1,171 @@
+/* Co-Founders / Leadership Section (SellerPass Operator Reference) */
+        .founders-section {
+            background-color: var(--bg-secondary);
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+            position: relative;
+        }
+
+        .founders-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 2.5rem;
+            max-width: 1040px;
+            margin: 0 auto;
+        }
+
+        .founder-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--card-shadow);
+            position: relative;
+        }
+
+        .founder-card:hover {
+            border-color: var(--border-highlight);
+            transform: translateY(-6px);
+            box-shadow: var(--glow-shadow);
+            background: var(--bg-card-hover);
+        }
+
+        .founder-img-container {
+            position: relative;
+            width: 100%;
+            height: 380px;
+            background: linear-gradient(180deg, #18283a 0%, #0d1622 100%);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .founder-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            transition: transform 0.4s ease;
+        }
+
+        .founder-card:hover .founder-img {
+            transform: scale(1.04);
+        }
+
+        .founder-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            color: var(--text-muted);
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(0, 229, 255, 0.08) 0%, rgba(9, 14, 20, 0.95) 75%);
+        }
+
+        .founder-placeholder svg {
+            width: 68px;
+            height: 68px;
+            color: var(--primary);
+            opacity: 0.85;
+        }
+
+        .founder-placeholder-hint {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
+            color: var(--primary);
+            background: rgba(0, 229, 255, 0.08);
+            border: 1px dashed rgba(0, 229, 255, 0.35);
+            padding: 6px 14px;
+            border-radius: 6px;
+        }
+
+        .founder-content {
+            padding: 2.2rem 2.2rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .founder-role-badge {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.76rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .founder-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.65rem;
+            font-weight: 700;
+            color: var(--text-white);
+            margin-bottom: 0.75rem;
+        }
+
+        .founder-bio {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            line-height: 1.65;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .founder-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .founder-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            color: #cbd5e1;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-subtle);
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+
+        .founder-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 1.25rem;
+        }
+
+        .founder-social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: var(--text-gray);
+            transition: all 0.2s ease;
+        }
+
+        .founder-social-link:hover {
+            color: var(--primary);
+            transform: translateX(2px);
+        }
+
+        .founder-social-link svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }

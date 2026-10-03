@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard - Arkevo Marketing Agency</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="logo-container">
+                <img src="assets/logo-ecom.jpg" alt="Arkevo" class="logo-img" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiI+PHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiBmaWxsPSIjMDBFNUZGIi8+PHRleHQgeD0iMTYiIHk9IjIxIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZmlsbD0iIzBmMTkyMyIgdGV4dC1hbmNob3I9Im1pZGRsZSI+QTwvdGV4dD48L3N2Zz4='">
+                <div class="logo-text">Arkevo<span>.</span></div>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active">
+                    <svg class="icon"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <svg class="icon"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    <span class="nav-text">Campaigns</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <svg class="icon"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                    <span class="nav-text">Products</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <svg class="icon"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                    <span class="nav-text">Analytics</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <svg class="icon"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    <span class="nav-text">Reports</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <svg class="icon"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                    <span class="nav-text">Settings</span>
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="index.html" class="back-link">
+                    <svg class="icon"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                    <span>Back to Website</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <button class="toggle-btn" id="sidebarToggle">
+                        <svg class="icon"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                    </button>
+                    <div class="search-bar">
+                        <svg class="icon" style="color: var(--text-muted);"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                </div>
+                
+                <div class="header-right">
+                    <div class="date-selector">
+                        <svg class="icon"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                        Last 30 Days
+                        <svg class="icon" style="width: 14px; height: 14px;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    
+                    <div class="notification">
+                        <svg class="icon"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                        <span class="badge">3</span>
+                    </div>
+                    
+                    <div class="user-profile" title="Admin User">AK</div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-body">
+                
+                <div>
+                    <h1 class="page-title">Analytics Overview</h1>
+                    <p class="page-subtitle">Track your advertising performance and key metrics.</p>
+                </div>
+
+                <!-- KPI Cards -->
+                <div class="grid-4" id="kpiRow">
+                    <div class="card">
+                        <div class="kpi-title">Total Ad Spend <svg class="icon" style="width:16px;height:16px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
+                        <div class="kpi-value" data-target="124580" data-prefix="$">0</div>
+                        <div class="kpi-change up"><svg class="icon" style="width:14px;height:14px;"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg> 12.3% vs last period</div>
+                        <div class="sparkline-container"><canvas id="sparklineSpend"></canvas></div>
+                    </div>
+                    <div class="card">
+                        <div class="kpi-title">Total Revenue <svg class="icon" style="width:16px;height:16px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
+                        <div class="kpi-value" data-target="487920" data-prefix="$">0</div>
+                        <div class="kpi-change up"><svg class="icon" style="width:14px;height:14px;"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg> 18.7% vs last period</div>
+                        <div class="sparkline-container"><canvas id="sparklineRevenue"></canvas></div>
+                    </div>
+                    <div class="card">
+                        <div class="kpi-title">Average ACoS <svg class="icon" style="width:16px;height:16px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
+                        <div class="kpi-value" data-target="25.6" data-suffix="%">0</div>
+                        <div class="kpi-change good-down"><svg class="icon" style="width:14px;height:14px;"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg> 4.2% vs last period</div>
+                        <div class="sparkline-container"><canvas id="sparklineAcos"></canvas></div>
+                    </div>
+                    <div class="card">
+                        <div class="kpi-title">Average ROAS <svg class="icon" style="width:16px;height:16px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
+                        <div class="kpi-value" data-target="3.92" data-suffix="x">0</div>
+                        <div class="kpi-change up"><svg class="icon" style="width:14px;height:14px;"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg> 0.34x vs last period</div>
+                        <div class="sparkline-container"><canvas id="sparklineRoas"></canvas></div>
+                    </div>
+                </div>
+
+                <!-- Main Chart -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Revenue & Ad Spend</h2>
+                    </div>
+                    <div class="chart-container-large">
+                        <canvas id="mainChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Two Column Charts -->
+                <div class="grid-2">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">ACoS Trend (6 Months)</h2>
+                        </div>
+                        <div class="chart-container-medium">
+                            <canvas id="acosChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Ad Spend Distribution</h2>
+                        </div>
+                        <div class="chart-container-medium" style="display: flex; justify-content: center; align-items: center;">
+                            <canvas id="doughnutChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Campaign Table -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Campaign Performance</h2>
+                        <button class="toggle-btn" style="border: 1px solid var(--border-color); color: var(--text-white); font-size: 0.875rem; padding: 6px 12px;">Export CSV</button>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Campaign Name <svg class="icon" style="width:12px;height:12px;display:inline;"><polyline points="7 10 12 15 17 10"></polyline></svg></th>
+                                    <th>Status</th>
+                                    <th>Impressions</th>
+                                    <th>Clicks</th>
+                                    <th>CTR</th>
+                                    <th>Spend</th>
+                                    <th>Sales</th>
+                                    <th>ACoS</th>
+                                    <th>ROAS</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>SP - Auto - Top Sellers</td>
+                                    <td><span class="status-badge status-active">Active</span></td>
+                                    <td>124,580</td>
+                                    <td>1,245</td>
+                                    <td>1.0%</td>
+                                    <td>$1,450.20</td>
+                                    <td>$8,240.50</td>
+                                    <td class="text-green">17.5%</td>
+                                    <td>5.68x</td>
+                                </tr>
+                                <tr>
+                                    <td>SB - Exact - Branded</td>
+                                    <td><span class="status-badge status-active">Active</span></td>
+                                    <td>45,210</td>
+                                    <td>842</td>
+                                    <td>1.8%</td>
+                                    <td>$980.50</td>
+                                    <td>$6,420.00</td>
+                                    <td class="text-green">15.2%</td>
+                                    <td>6.54x</td>
+                                </tr>
+                                <tr>
+                                    <td>SD - Retargeting - 30d</td>
+                                    <td><span class="status-badge status-active">Active</span></td>
+                                    <td>89,400</td>
+                                    <td>412</td>
+                                    <td>0.4%</td>
+                                    <td>$845.00</td>
+                                    <td>$3,210.00</td>
+                                    <td class="text-amber">26.3%</td>
+                                    <td>3.79x</td>
+                                </tr>
+                                <tr>
+                                    <td>SP - Broad - Competitor</td>
+                                    <td><span class="status-badge status-paused">Paused</span></td>
+                                    <td>65,800</td>
+                                    <td>745</td>
+                                    <td>1.1%</td>
+                                    <td>$1,240.00</td>
+                                    <td>$2,850.00</td>
+                                    <td class="text-red">43.5%</td>
+                                    <td>2.29x</td>
+                                </tr>
+                                <tr>
+                                    <td>Video - Lifestyle Focus</td>
+                                    <td><span class="status-badge status-active">Active</span></td>
+                                    <td>150,200</td>
+                                    <td>1,850</td>
+                                    <td>1.2%</td>
+                                    <td>$2,100.00</td>
+                                    <td>$10,500.00</td>
+                                    <td class="text-green">20.0%</td>
+                                    <td>5.00x</td>
+                                </tr>
+                                <tr>
+                                    <td>SP - Phrase - Category</td>
+                                    <td><span class="status-badge status-active">Active</span></td>
+                                    <td>98,400</td>
+                                    <td>890</td>
+                                    <td>0.9%</td>
+                                    <td>$1,120.50</td>
+                                    <td>$3,840.20</td>
+                                    <td class="text-amber">29.1%</td>
+                                    <td>3.42x</td>
+                                </tr>
+                                <tr>
+                                    <td>SBv - Top of Search</td>
+                                    <td><span class="status-badge status-paused">Paused</span></td>
+                                    <td>42,100</td>
+                                    <td>310</td>
+                                    <td>0.7%</td>
+                                    <td>$680.00</td>
+                                    <td>$1,540.00</td>
+                                    <td class="text-red">44.1%</td>
+                                    <td>2.26x</td>
+                                </tr>
+                                <tr>
+                                    <td>SP - Exact - High Intent</td>
+                                    <td><span class="status-badge status-active">Active</span></td>
+                                    <td>24,500</td>
+                                    <td>480</td>
+                                    <td>1.9%</td>
+                                    <td>$750.80</td>
+                                    <td>$4,120.50</td>
+                                    <td class="text-green">18.2%</td>
+                                    <td>5.48x</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Keywords and Platform -->
+                <div class="grid-2-1">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Top Performing Keywords</h2>
+                        </div>
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Keyword</th>
+                                        <th>Match</th>
+                                        <th>Impr.</th>
+                                        <th>Clicks</th>
+                                        <th>Conv.</th>
+                                        <th>ACoS</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-cyan">wireless earbuds</td>
+                                        <td>Exact</td>
+                                        <td>15,240</td>
+                                        <td>420</td>
+                                        <td>12.5%</td>
+                                        <td class="text-green">14.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-cyan">bluetooth headphones</td>
+                                        <td>Phrase</td>
+                                        <td>22,100</td>
+                                        <td>380</td>
+                                        <td>9.8%</td>
+                                        <td class="text-green">18.5%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-cyan">noise cancelling</td>
+                                        <td>Broad</td>
+                                        <td>35,400</td>
+                                        <td>510</td>
+                                        <td>7.2%</td>
+                                        <td class="text-amber">27.4%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-cyan">earbuds with mic</td>
+                                        <td>Exact</td>
+                                        <td>8,450</td>
+                                        <td>180</td>
+                                        <td>14.1%</td>
+                                        <td class="text-green">11.8%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-cyan">sport earphones</td>
+                                        <td>Phrase</td>
+                                        <td>14,200</td>
+                                        <td>240</td>
+                                        <td>8.5%</td>
+                                        <td class="text-amber">31.2%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-cyan">best wireless earbuds</td>
+                                        <td>Exact</td>
+                                        <td>5,100</td>
+                                        <td>120</td>
+                                        <td>11.2%</td>
+                                        <td class="text-green">16.7%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Platform Split</h2>
+                        </div>
+                        <div class="chart-container-medium">
+                            <canvas id="barChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Activity Feed -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Recent Activity</h2>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-title">Campaign Budget Increased: "SP - Auto - Top Sellers"</div>
+                                <div class="timeline-time">Today, 10:42 AM • by System Automation</div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-title">New Negative Keywords Added (14 items)</div>
+                                <div class="timeline-time">Yesterday, 4:15 PM • by Admin User</div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-title">Campaign Paused: "SP - Broad - Competitor" due to high ACoS</div>
+                                <div class="timeline-time">Yesterday, 9:30 AM • by Rule Engine</div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-title">Listing A+ Content Updated: "Wireless Earbuds Pro"</div>
+                                <div class="timeline-time">Oct 24, 2:10 PM • by Content Team</div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-title">New Campaign Launched: "Video - Lifestyle Focus"</div>
+                                <div class="timeline-time">Oct 22, 11:00 AM • by Admin User</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </main>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
