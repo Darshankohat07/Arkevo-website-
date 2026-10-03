@@ -3,6 +3,8 @@
 
 This repository contains the official high-converting website and live analytics dashboard for **Arkevo**, an e-commerce growth agency specializing in Amazon & Walmart PPC, ACoS reduction, and catalog optimization.
 
+Official web assets, frontend codebase, and deployment configurations for Arkevo — an Amazon advertising and e-commerce growth agency.
+
 ---
 
 ## 📁 Fully Sub-Distributed Modular Architecture
